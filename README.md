@@ -1,24 +1,9 @@
-# README
+rails db:setup
+rails
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+This is a POC app, thats why below things are not covered.
+1. Validations
+2. Storing hard coded values for make, mode, trim, body_type etc.
+3. No UI added yet.
+4. Not covered E2E tests.
+5. Built it as a separate REST API app.

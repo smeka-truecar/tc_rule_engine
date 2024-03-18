@@ -2,6 +2,8 @@ class Rule < ApplicationRecord
   has_many :conditions, dependent: :destroy
   belongs_to :dealer
 
+  accepts_nested_attributes_for :conditions, allow_destroy: true
+
   def conditions_met?(vehicle_info)
     conditions.present? &&conditions.all? { |condition| condition.evaluate(vehicle_info) }
   end

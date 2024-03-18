@@ -2,7 +2,7 @@ class QuoteCalculator
   attr_reader :vehicle_info
 
   def initialize(vehicle_info)
-    @vehicle_info = vehicle_info
+    @vehicle_info = vehicle_info.with_indifferent_access
   end
 
   def calculate

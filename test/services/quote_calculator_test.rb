@@ -108,7 +108,6 @@ describe QuoteCalculator do
   end
 
   def setup_dealer_rules
-    Dealer.destroy_all
     @dealer = Dealer.create(name: "Dealer 1")
 
     exclude_rules = [
@@ -194,5 +193,9 @@ describe QuoteCalculator do
   def calculate(vehicle)
     calculator = QuoteCalculator.new(vehicle)
     calculator.calculate
+  end
+
+  def teardown
+    Dealer.destroy_all
   end
 end
